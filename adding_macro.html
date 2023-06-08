@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adding a Macro to Excel</title>
+</head>
+<style>
+    body {
+        background-color: gray;
+    }
+    li {
+        color: white;
+        font-size: large;
+        margin: 20px;
+    }
+    h1 {
+        color: white;
+    }
+    .options {
+        width: 500px;
+        height: 350px;
+    }
+    p{
+        color: white;
+        font-size: larger;
+    }
+</style>
+<body>
+    <a href="macros.html">Back to Home</a>
+    <h1>Adding a Macro to Excel</h1>
+    <ol>
+        <li>Open Excel and go to the Developer tab in your ribbon. If you do not have that tab go to 
+            <a href="developer.html">Adding the Developer tab</a> to learn how to add it.</li>
+            <img src="Downloads/The-Developer-tab-is-now-enabled.webp" alt="">
+        <li>Open Visual Basic (the top left of the picture above)</li>
+        <li>Click on "Insert", and "Module"</li>
+        <img src="Downloads/insert-module.png" alt="">
+        <li>In "Module1" that appears, paste the code where you see it in the picture</li>
+        <img src="Downloads/How-to-find-blank-cells-with-VBA.png" alt="">
+        <li>Close "Visual Basic", then open "Macros" (right next to Visual Basic) and select "hype_link"</li>
+        <img src="Downloads/The-Developer-tab-is-now-enabled.webp" alt="">
+        <li>Click on "Options", then assign a key-bind to it.</li>
+        <img class = "options" src="Downloads/Assign-Keyboard-Shortcut-to-Macro-Open-Options-Window.webp" alt="">
+        <img class="options" src="Downloads/Macro-Options-Window-Choose-Shortcut-Key.webp" alt="">
+        <p>Your macro should now be set up and assigned to use with a key-bind! To run it, simply press "Ctrl" and whatever key you decided to assign it to.</p>
+    </ol>
+</body>
+</html>

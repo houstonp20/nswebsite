@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Sub link(source, des, des_sheet)\
+\
+MyInt = CLng(des_sheet)\
+Dim work As Worksheet\
+Set work = Sheets(MyInt)\
+If Range(source).Value = \'93\'94 Or Range(des).Value = \'93\'94 Then\
+MsgBox(\'93Can\'92t Hyperlink cells with no contents. Try putting filler text or values in the empty cell(s)\'94)\
+Exit Sub\
+End If\
+ActiveSheet.Hyperlinks.Add Anchor:=Range(source), Address:="", SubAddress:="'" & work.name & "'!" & des, TextToDisplay:=Range(source).Value\
+ActiveSheet.Hyperlinks.Add Anchor:=work.Range(des), Address:="", SubAddress:="'" & ActiveSheet.name & "'!" & source, TextToDisplay:=work.Range(des).Value\
+\
+End Sub\
+\
+Sub hype_link()\
+\
+Answer1 = InputBox("Source Cell")\
+If Answer1 = "" Then Exit Sub\
+Answer2 = InputBox("Destination Cell")\
+If Answer2 = "" Then Exit Sub\
+Answer3 = InputBox("Sheet number of destination cell")\
+If Answer3 = "" Then Exit Sub\
+Call link(Answer1, Answer2, Answer3)\
+\
+End Sub}
